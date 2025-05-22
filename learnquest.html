@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Croccy Learn About Yourself Questions</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('crocquest.jpg');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh; 
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .buttonContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 90%;
+            max-width: 300px;
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: darkred;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 id="question">Loading About You and Opinion Question...</h2>
+        <input type="text" id="answer" placeholder="Your answer here...">
+        <button onclick="redirectTo('acceptquest.html')">Continue</button>
+        <button onclick="newQuestion()">Another Question</button>
+        <button onclick="redirectTo('question.html')">Back</button>
+    </div>
+
+    <script>
+        const questions = [
+            "What Is One Small Win You Can Do Next Year To Be Proud Of?",
+            "What Is Your Favourite Food and Why?",
+            "How Do You Feel About Your Past Year?",
+            "Is Happiness A Choice? Why Or Why Not",
+            "Are You A Listener Or A Talker?",
+            "What Is Most Memorable About This Past Year?",
+            "What Do You Think Will Be The Biggest Change In Your Life Five Years From Now?",
+            "How Can You Be Kinder To Your Future Self For Next Year?",
+            "Was There A Time In Your Life That Made You A Stronger Person For It?",
+            "What Would Your Ideal Next Year Look Like To You/",
+            "What Would You Tell Your Past Self From Last Year?",
+            "Describe A Time That You Overcame A Challenge",
+            "Who Recently Made You Smile?",
+            "If You Were On Holiday But You Can Only Take Three Things With You, What Would You Take?",
+            "Do You Have Anything Of Sentimental Value That You Would Never Sell Not Even For £10000?",
+            "How Do You Define Intelligence?",
+            "What Is One Place You Would Love To Travel To? Why?",
+            "What Are The Three Most Important Things To Be Happy?",
+            "What Is One Way You Can Consider Yourself Lucky?",
+            "What Is The Most Energizing Part Of Your Day?",
+            "How Do You Express Gratitude For Good Things Or People In Your Life?",
+            "What Invention Has Had The Greatest Impact On Human Civilization? Why?",
+            "Whats Your Favourite Way Of Wasting Time?",
+            "What Are Your Hobbies? Why Do You Enjoy Them?",
+            "What Does The Phrase Living A Good Life Mean To You?",
+            "Do Meme's Make The Internet A Better Place?"
+        ];
+
+        function newQuestion() {
+            const randomIndex = Math.floor(Math.random() * questions.length);
+            document.getElementById("question").innerText = questions[randomIndex];
+            document.getElementById("answer").value = "";
+        }
+
+        window.onload = newQuestion;
+    </script>
+        <script>
+            function redirectTo(page) {
+                window.location.href = page;
+            }
+        </script>
+</body>
+</html>

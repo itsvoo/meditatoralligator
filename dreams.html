@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Croccy Dream Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('crocsleep.jpg');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh; 
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .buttonContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 90%;
+            max-width: 300px;
+        }
+
+        textarea {
+            width: 300px;
+            height: 400px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: none;
+            margin-bottom: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="textContainer">
+        <textarea placeholder="What Was Your Dream Last Night?..."></textarea>
+    </div>
+    <div>
+        <button onclick="redirectTo('acceptsleep.html')">Continue</button>
+        <button onclick="redirectTo('reflect.html')">Back</button>
+    </div>
+
+    <script>
+        function redirectTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
